@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :users, only: [:index, :create, :destroy]
       resources :decks, only: [:index, :create, :destroy]
       resources :cards, only: [:index, :create, :destroy]
+      post '/cards/:id', to: 'cards#delete'
     end
   end
 end
